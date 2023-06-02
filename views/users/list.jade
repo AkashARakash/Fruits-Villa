@@ -1,0 +1,15 @@
+extends navbar 
+block content
+ 
+    .row.mx-5.mt-3
+      each fruit, i in fruits 
+        .col-md-3
+          .card.mt-3.mx-3(style='width: 25rem;')
+            img.card-img-top(src='https://c4.wallpaperflare.com/wallpaper/461/890/384/strawberry-water-splash-wallpaper-preview.jpg' alt='Sunset Over the Sea')
+            .card-body
+              h3.card-text
+                | #{fruit.name}
+              p.card-text
+                | #{fruit.description}
+              p.card-footer 
+                |$ #{fruit.price}

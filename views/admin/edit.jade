@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container.mt-5
+      form(action='/admin/edit/'+fruit._id method='post')
+        .mb-3
+          h2(style='font-weight:bold;') Edit Fruite
+          label.form-label(for='exampleInputEmail1') Name
+          input#exampleInputEmail1.form-control(type='text' value=fruit.name name='name')
+        .mb-3
+          label.form-label(for='exampleInputPassword1') Description
+          input#exampleInputPassword1.form-control(type='text' value=fruit.description name='description')
+        .mb-3
+          label.form-label(for='exampleInputPassword1') Price
+          input#exampleInputPassword1.form-control(type='number' value=fruit.price name='price')
+        button.btn.btn-primary(type='submit') Submit
